@@ -4,14 +4,14 @@ let dataInject = document.getElementById("dataInject")
 
 
 // These funcitons below will generate our elements
-function displayData(data) {
+function displayData() {
 
     //Image
     let imgCol = document.createElement("div")
     imgCol.className = "col-12 text-center"
 
     let img = document.createElement("img")
-    img.setAttribute('src', data.img_src)
+    img.setAttribute('src', "N/A")
     img.className = "img-fluid maxHeigth";
 
     imgCol.appendChild(img)
@@ -22,13 +22,13 @@ function displayData(data) {
     textCol.className = "col-12 text-center";
 
     let cameraType = document.createElement('h2')
-    cameraType.innerText = "View: " + data.camera.full_name
+    cameraType.innerText = "View: " + "N/A"
 
     let roverName = document.createElement('h3')
-    roverName.innerText = "Rover: " + data.rover.name
+    roverName.innerText = "Rover: " + "N/A"
 
     let roverStatus = document.createElement('h3')
-    roverStatus.innerText = "Status: " + data.rover.status
+    roverStatus.innerText = "Status: " + "N/A"
 
     textCol.appendChild(cameraType);
     textCol.appendChild(roverName);
