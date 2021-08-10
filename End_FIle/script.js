@@ -7,14 +7,14 @@ apiKey = '&api_key=Demo_Key'
 fetchFunction(apiUrl + apiEndpoint + apiKey)
 
 async function fetchFunction(url) {
-    const fetchData = await fetch(url);
-    if (fetchData.status !== 404 && fetchData.status !== 403) {
-        let jsonData = await fetchData.json();
+    const response = await fetch(url);
+    if (response.ok) {
+        let jsonData = await response.json();
 
-        if (jsonData.photos) {
+        if (Array.isArray(jsonData.photos)) {
             jsonData.photos.forEach(photo => displayData(photo))
         }
-    } else{
+    } else {
         doesNotExist()
     }
 }
