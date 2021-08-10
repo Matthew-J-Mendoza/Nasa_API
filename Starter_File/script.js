@@ -1,27 +1,4 @@
 let dataInject = document.getElementById("dataInject")
-apiUrl = 'https://api.nasa.gov'
-apiEndpoint = '/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2020-6-3&page=1'
-apiKey = '&api_key=Demo_Key'
-
-
-fetchFunction(apiUrl + apiEndpoint + apiKey)
-
-async function fetchFunction(url) {
-    const fetchData = await fetch(url);
-    if (fetchData.status !== 404 && fetchData.status !== 403) {
-        let jsonData = await fetchData.json();
-
-        if (jsonData.photos) {
-            jsonData.photos.forEach(photo => displayData(photo))
-        }
-    } else{
-        doesNotExist()
-    }
-}
-
-
-
-
 
 
 
@@ -67,6 +44,7 @@ function displayData(data) {
 
 function doesNotExist()
 {
+    let dataInject = document.getElementById("dataInject")
     let textCol = document.createElement('div');
     textCol.className = "col-12 text-center";
 
