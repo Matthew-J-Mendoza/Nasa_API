@@ -1,7 +1,7 @@
 let dataInject = document.getElementById("dataInject")
-apiUrl = 'https://api.nasa.gov'
-apiEndpoint = '/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2020-6-3&page=1'
-apiKey = '&api_key=Demo_Key'
+let apiUrl = 'https://api.nasa.gov'
+let apiEndpoint = '/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2020-6-3&page=1'
+let apiKey = '&api_key=Demo_Key'
 
 
 fetchFunction(apiUrl + apiEndpoint + apiKey)
